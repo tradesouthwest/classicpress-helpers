@@ -3,6 +3,7 @@ Additional help files for ClassicPress theme development
 
 ## classicpresstestunitdata.2023.xml
 Stripped out all the Blocks posts and removed half the tags and cats. All pages are the same as original wp-xml
+Visit https://classicpress-themes.com/tinydancer/news/ to review content before dowloading.
 ### Installation
 - Visit https://github.com/WordPress/wordpress-importer
 - Use https://github.com/WordPress/wordpress-importer/releases/tag/0.7 release for CP 1.5.3+
