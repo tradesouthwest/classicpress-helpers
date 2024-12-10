@@ -4,7 +4,7 @@
  *
  * @package ClassicPress
  * @subpackage Administration
- *//* ======== Line 171 is change for cp dir integration notice ======== */
+ *//* ======== Line 56 starts change for cp dir integration notice ======== */
 
 /** ClassicPress Administration Bootstrap */
 require_once __DIR__ . '/admin.php';
@@ -167,8 +167,19 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 	 */
 	$tabs = apply_filters( 'install_themes_tabs', array( 'upload' => __( 'Upload Theme' ) ) );
 	if ( ! empty( $tabs['upload'] ) && current_user_can( 'upload_themes' ) ) {
-		echo ' <p><button type="button" class="upload-view-toggle page-title-action hide-if-no-js" aria-expanded="false">' . __( 'Upload Theme' ) . '</button>';
-		echo ' <button id="cp-directory-integration-view" name="cp_directory_integration_view" type="button" class="directory-integration-toggle page-title-action hide-if-no-js" aria-expanded="false">' . __( 'Find ClassicPress Themes' ) . '</button></p>';
+		echo ' <ul class="cp-aligninline">
+		<li><button type="button" class="upload-view-toggle page-title-action hide-if-no-js" aria-expanded="false">' . __( 'Upload Theme' ) . '</button></li>';
+
+		echo ' <li class="cpnotice-cp-aligninline"><button id="cp-directory-integration-view" name="cp_directory_integration_view" type="button" 
+		class="page-title-action hide-if-no-js" aria-expanded="false" title="' . __( 'Find ClassicPress Themes' ) . '" 
+		onclick="dirIntegrationInfo();">
+		' . __( 'Find ClassicPress Themes' ) . '</button>
+		<div id="directory-integration-toggle" class="notice notice-success is-dismissible" style="display: none;">
+		<p>You can install themes by installing the <a href="https://directory.classicpress.net/plugins/classicpress-directory-integration/" target="_blank">ClassicPress Directory Integration Plugin</a>. 
+		You can do so by downloading it from the <a href="https://directory.classicpress.net/" target="_blank">ClassicPress Directory</a>. Then open Plugins>Add New>Upload. After activating it visit Plugins>Install CP themes.</p>
+		</div></li>
+		</ul><style>.cp-aligninline {display: inline-flex;}</style>
+		<script>function dirIntegrationInfo(){document.getElementById("directory-integration-toggle").style.display = "block";}</script>';
 	}
 	?>
 
