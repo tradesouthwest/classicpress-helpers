@@ -14,3 +14,4 @@ Visit https://classicpress-themes.com/tinydancer/news/ to review content before 
 
 [ClassicPress Directory and How To Add Your Theme or Plugin](http://classicpress-themes.com/classicpress-directory-and-how-to-add-your-theme-or-plugin/)
 
+Good working git workflow example https://github.com/ElisabettaCarrara/also-in-this-collection/
